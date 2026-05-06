@@ -969,6 +969,304 @@ footer .footnote .highlight {
   font-family: "Open Sans";
 }
 
+/* Specific section layout overrides for the updated page structure */
+section {
+  scroll-margin-top: 90px;
+}
+
+#home {
+  min-height: calc(100vh - 70px);
+  padding: 120px 24px 80px;
+  background: linear-gradient(135deg, rgba(15, 15, 35, 0.98), rgba(26, 26, 46, 0.95));
+}
+
+#home .flex {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#home .text {
+  font-size: 32pt;
+  line-height: 1.05;
+  max-width: 760px;
+  margin: 0 auto 30px;
+  text-align: left;
+}
+
+#home .button {
+  margin-top: 32px;
+}
+
+#home nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background: rgba(8, 8, 16, 0.95);
+  border-bottom: 1px solid rgba(83, 52, 131, 0.35);
+  padding: 0 24px;
+  height: 70px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home nav .link-wrap {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#home nav .link-wrap div {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+#home nav .link-wrap div.active,
+#home nav .link-wrap div:hover {
+  color: var(--text);
+}
+
+#about,
+#resume,
+#portfolio,
+#contact {
+  padding-top: 140px;
+  padding-bottom: 100px;
+}
+
+#about {
+  color: #d9e1ff;
+}
+
+#about .container {
+  max-width: 1120px;
+}
+
+#about .label-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+#about .bullet-wrap {
+  min-height: 180px;
+  padding: 28px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 24px;
+}
+
+#about .bullet-wrap .label {
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+#about .skills-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  width: 100%;
+  align-items: start;
+}
+
+#about .skills-wrapper .me {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 24px;
+  margin-bottom: 20px;
+}
+
+#about .skills-wrapper .bar {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  height: 20px;
+  margin-bottom: 18px;
+}
+
+#about .skills-wrapper .bar span {
+  display: inline-block;
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+#about .skills-wrapper .bar .tag {
+  position: relative;
+  display: inline-block;
+  padding: 0 16px;
+  color: #fff;
+  background: transparent;
+  width: auto;
+  height: auto;
+}
+
+#resume {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+#resume .container {
+  max-width: 980px;
+}
+
+#resume .label-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+#resume .bullet-wrap {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 24px;
+  padding: 28px;
+  min-height: 180px;
+  text-align: left;
+}
+
+#resume .bullet-wrap .label {
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+#resume .bullet-wrap div {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#portfolio {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+#portfolio .filter-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+#portfolio .filter {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.88);
+  border-radius: 999px;
+  padding: 12px 26px;
+  font-size: 10pt;
+  letter-spacing: 0.08em;
+  transition: all 0.25s ease;
+}
+
+#portfolio .filter:hover,
+#portfolio .filter.active {
+  background: var(--text);
+  color: #0f0f23;
+}
+
+#portfolio #gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 26px;
+  margin-top: 20px;
+}
+
+#portfolio .mix {
+  display: block !important;
+}
+
+#portfolio .mix .card {
+  width: 100% !important;
+}
+
+#portfolio .card {
+  border-radius: 24px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#portfolio .mix:hover .card {
+  transform: translateY(-8px);
+}
+
+#portfolio .mix .button {
+  opacity: 1 !important;
+}
+
+#portfolio .mix .text {
+  position: absolute;
+  bottom: 28px;
+  left: 24px;
+  right: 24px;
+  text-align: left;
+  opacity: 1;
+  color: #fff;
+}
+
+#portfolio .mix .button {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  width: auto;
+  padding: 10px 24px;
+  background: rgba(0, 0, 0, 0.55);
+  border-color: #fff;
+}
+
+#portfolio .mix .text .bold {
+  font-size: 14pt;
+  color: #fff;
+}
+
+#portfolio .mix .highlight {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#contact {
+  background: #121526;
+}
+
+#contact .container {
+  max-width: 920px;
+}
+
+#contact .header-bar {
+  width: 90px;
+  margin-bottom: 28px;
+}
+
+#contact form {
+  margin: 40px auto 0 auto;
+  width: 100%;
+  max-width: 640px;
+}
+
+#contact input[type=text],
+#contact input[type=email],
+#contact textarea {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  color: #fff;
+}
+
+#contact .button {
+  background: var(--text);
+  color: #0f0f23;
+  border-color: transparent;
+}
+
+#contact .button:hover {
+  background: #fff;
+}
+
 @media screen and (max-width: 400px) {
   section:nth-of-type(3) #gallery .mix .card {
     width: 100vw;

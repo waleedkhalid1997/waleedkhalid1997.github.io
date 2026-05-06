@@ -53,11 +53,11 @@ $(function() {
     if (pos2 > $('#about').offset().top) {
       highlightLink('about');
     }
+    if (pos2 > $('#resume').offset().top) {
+      highlightLink('resume');
+    }
     if (pos2 > $('#portfolio').offset().top) {
       highlightLink('portfolio');
-    }
-    if (pos2 > $('#blog').offset().top) {
-      highlightLink('blog');
     }
     if (
       pos2 > $('#contact').offset().top ||
@@ -89,7 +89,7 @@ $(function() {
     var anchor = $(this).attr('dest');
     $('.link-wrap').removeClass('visible');
 
-    $('nav span').removeClass('active');
+    $('nav .active').removeClass('active');
     $('nav')
       .find('[dest="' + anchor + '"]')
       .addClass('active');
@@ -105,19 +105,6 @@ $(function() {
   $('.mdi-menu').click(function() {
     $('.link-wrap').toggleClass('visible');
   });
-
-  $('.blog-wrap').hover(
-    function() {
-      $('.blog-wrap')
-        .not(this)
-        .addClass('fade');
-      $(this).addClass('hover');
-    },
-    function() {
-      $(this).removeClass('hover');
-      $('.blog-wrap').removeClass('fade');
-    }
-  );
 
   posFilterBar($('.filter').first());
 
