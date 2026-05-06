@@ -28,8 +28,9 @@ textarea {
   overflow-x: hidden;
 }
 .container {
-  width: min(1200px, calc(100% - 48px));
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 24px;
 }
 .flex {
   display: flex;
