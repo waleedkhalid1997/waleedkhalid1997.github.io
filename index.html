@@ -143,7 +143,7 @@
                 </div>
 
                 <div class="skills-wrapper">
-                    <div class="flex flex-50-gt-sm waypoint" data-animation="slide-in-left">
+                    <div class="waypoint" data-animation="slide-in-left">
                         <img src="img/me.png" class="me" loading="lazy" />
                         <!-- <div><img class="up-arrow" src="img/up-arrow.png"></div> -->
                         <!-- <div class="label bold">Who's this guy?</div> -->
@@ -153,12 +153,8 @@
                             <span class="page-link highlight" dest="contact">Let's build something amazing together.</span>
                         </div>
               </div>
-            </div>
 
-            <div
-              class="flex flex-50-gt-sm waypoint bars-wrap"
-              data-animation="slide-in-right"
-            >
+            <div class="waypoint bars-wrap" data-animation="slide-in-right">
 
                         <div class="bar flex">
                           <div class="bar fill" style="width:100%">
@@ -418,21 +414,14 @@
         </section>
 
         <!-- PORTFOLIO -->
-        <section class="flex" id="portfolio">
-            <div class="header waypoint" data-animation="slide-in-right">
-                PROJECTS
-            </div>
-            <div class="header-bar waypoint" data-animation="slide-in-right" data-delay=".3s"></div>
-
-            <div class="filter-wrap waypoint" data-animation="fade-in">
-                <div class="flex row">
-                    <div class="filter" data-filter="all">ALL</div>
-                    <div class="filter" data-filter=".php">PHP</div>
-                    <div class="filter" data-filter=".python">Python</div>
-                    <div class="filter" data-filter=".angular">Angular Cli</div>
-                    <div class="filter" data-filter=".node">Node/ ExpressJS</div>
+        <section id="portfolio">
+            <div class="container">
+                <div class="header waypoint" data-animation="slide-in-right">
+                    PROJECTS
                 </div>
-                <div class="float-bar">
+                <div class="header-bar waypoint" data-animation="slide-in-right" data-delay=".3s"></div>
+
+                <div class="filter-wrap waypoint" data-animation="fade-in">
                     <div class="flex row">
                         <div class="filter" data-filter="all">ALL</div>
                         <div class="filter" data-filter=".php">PHP</div>
@@ -440,10 +429,21 @@
                         <div class="filter" data-filter=".angular">Angular Cli</div>
                         <div class="filter" data-filter=".node">Node/ ExpressJS</div>
                     </div>
+                    <div class="float-bar">
+                        <div class="flex row">
+                            <div class="filter" data-filter="all">ALL</div>
+                            <div class="filter" data-filter=".php">PHP</div>
+                            <div class="filter" data-filter=".python">Python</div>
+                            <div class="filter" data-filter=".angular">Angular Cli</div>
+                            <div class="filter" data-filter=".node">Node/ ExpressJS</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gallery" class="waypoint">
                 </div>
             </div>
-
-            <div id="gallery" class="container waypoint">
+        </section>
 
                 <div class="mix php" data-my-order="1">
                     <div>
@@ -577,28 +577,30 @@
         </section>
 
         <footer>
-            <i class="mdi mdi-chevron-double-up page-link" dest="home"></i>
+            <div class="container">
+                <i class="mdi mdi-chevron-double-up page-link" dest="home"></i>
 
-            <div class="icon-wrap flex row">
-                <a target="_blank" href="https://www.linkedin.com/in/waleed-khalid-073b04131/">
-                    <div class="flex icon">
-                        <i class="mdi mdi-linkedin"></i>
+                <div class="icon-wrap flex row">
+                    <a target="_blank" href="https://www.linkedin.com/in/waleed-khalid-073b04131/">
+                        <div class="flex icon">
+                            <i class="mdi mdi-linkedin"></i>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://github.com/Waleedkhalid1997/">
+                        <div class="flex icon">
+                            <i class="mdi mdi-github"></i>
+                        </div>
+                    </a>
+                    <a href="mailto:your.email@example.com">
+                        <div class="flex icon">
+                            <i class="mdi mdi-email"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="info-box">
+                    <div class="footnote">
+                        © 2024 Waleed Khalid. All rights reserved.
                     </div>
-                </a>
-                <a target="_blank" href="https://github.com/Waleedkhalid1997/">
-                    <div class="flex icon">
-                        <i class="mdi mdi-github"></i>
-                    </div>
-                </a>
-                <a href="mailto:your.email@example.com">
-                    <div class="flex icon">
-                        <i class="mdi mdi-email"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="info-box">
-                <div class="footnote">
-                    © 2024 Waleed Khalid. All rights reserved.
                 </div>
             </div>
         </footer>
