@@ -11,6 +11,9 @@ body {
   font-family: "Raleway", "Open Sans", sans-serif;
   color: #eef2ff;
   background: linear-gradient(180deg, #0a1022 0%, #12192d 100%);
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(100, 210, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(116, 152, 255, 0.05) 0%, transparent 50%);
 }
 a {
   color: inherit;
@@ -294,7 +297,7 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.5) 100%);
   pointer-events: none;
 }
 .card img {

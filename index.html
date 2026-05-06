@@ -52,7 +52,6 @@
     <!-- LOCAL -->
     <script src="scripts/pt.min.js"></script>
     <script src="scripts/index.js"></script>
-    <script src="scripts/modal.js"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5628600659551979"
      crossorigin="anonymous"></script>
 </head>
@@ -61,51 +60,25 @@
     <noscript>Please enable JavaScript to continue using this application.</noscript>
     <div class="overflow-wrap">
         <!-- HOME -->
-        <div class="modal-wrap flex">
-            <div class="mask"></div>
-            <div class="modal" id="modal">
-                <div class="carousel-wrap">
-                    <div class="window">
-                        <div id="carousel">
-                            <div class="slide"></div>
-                            <div class="slide"></div>
-                            <div class="slide"></div>
-                        </div>
-                        <i class="mdi mdi-chevron-left" id="prev"></i>
-                        <i class="mdi mdi-chevron-right" id="next"></i>
-                    </div>
-                </div>
-                <div class="info-box">
-                    <div class="title"></div>
-                    <div class="tag"></div>
-                    <div class="detail"></div>
-                    <a href="#" target="_blank">
-                        <div class="button">
-                            <i class="mdi mdi-open-in-new"></i>VIEW SITE
-                        </div>
-                    </a>
-                </div>
-                <i class="close mdi mdi-close"></i>
-            </div>
-        </div>
-
         <section id="home" class="flex height-fix">
             <div class="flex">
                 <div class="text">
-                    Hello, I'm <span class="highlight">Waleed Khalid</span>.
-                    <br /> I'm a full-stack web developer specializing in modern technologies.
+                    Hi, I'm <span class="highlight">Waleed Khalid</span>.
+                    <br /> A passionate full-stack developer crafting digital experiences.
                 </div>
 
                 <div class="button page-link" dest="about">
-                    View my work <i class="mdi mdi-arrow-right"></i>
+                    Explore My Work <i class="mdi mdi-arrow-right"></i>
                 </div>
 
                 <nav class="flex">
                     <div class="link-wrap">
                         <div class="active page-link" dest="home">Home</div>
                         <div class="page-link" dest="about">About</div>
+                        <div class="page-link" dest="services">Services</div>
                         <div class="page-link" dest="resume">Resume</div>
                         <div class="page-link" dest="portfolio">Portfolio</div>
+                        <div class="page-link" dest="testimonials">Testimonials</div>
                         <div class="page-link" dest="contact">Contact</div>
                     </div>
                 </nav>
@@ -171,7 +144,7 @@
 
                 <div class="skills-wrapper flex row-gt-sm">
                     <div class="flex flex-50-gt-sm waypoint" data-animation="slide-in-left">
-                        <img src="img/me.png" class="me" />
+                        <img src="img/me.png" class="me" loading="lazy" />
                         <!-- <div><img class="up-arrow" src="img/up-arrow.png"></div> -->
                         <!-- <div class="label bold">Who's this guy?</div> -->
                         <div>
@@ -326,6 +299,65 @@
             </div>
         </section>
 
+        <!-- SERVICES -->
+        <section id="services">
+            <div class="container flex">
+                <div class="header waypoint" data-animation="slide-in-left">
+                    SERVICES
+                </div>
+                <div class="header-bar waypoint" data-animation="slide-in-left" data-delay=".5s"></div>
+
+                <div class="flex row label-wrap">
+                    <div class="flex row-gt-sm">
+                        <div class="flex bullet-wrap">
+                            <div class="icon-wrap waypoint" data-animation="flip-in-x">
+                                <i class="mdi mdi-code-braces"></i>
+                            </div>
+                            <div class="waypoint" data-animation="fade-in">
+                                <div class="label bold">Full Stack Development</div>
+                                <div>
+                                    Building scalable web applications with modern technologies like React, Node.js, PHP, and more.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex bullet-wrap">
+                            <div class="icon-wrap waypoint" data-animation="flip-in-x" data-delay=".2s">
+                                <i class="mdi mdi-cloud-outline"></i>
+                            </div>
+                            <div class="waypoint" data-animation="fade-in" data-delay=".2s">
+                                <div class="label bold">Cloud & DevOps</div>
+                                <div>Deploying and managing applications on AWS, Docker, Kubernetes for reliable performance.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex row-gt-sm">
+                        <div class="flex bullet-wrap">
+                            <div class="icon-wrap waypoint" data-animation="flip-in-x" data-delay=".4s">
+                                <i class="mdi mdi-database"></i>
+                            </div>
+                            <div class="waypoint" data-animation="fade-in" data-delay=".4s">
+                                <div class="label bold">Database Design</div>
+                                <div>Designing efficient databases with MySQL, MongoDB, and optimizing queries for performance.</div>
+                            </div>
+                        </div>
+
+                        <div class="flex bullet-wrap">
+                            <div class="icon-wrap waypoint" data-animation="flip-in-x" data-delay=".6s">
+                                <i class="mdi mdi-cellphone-link"></i>
+                            </div>
+                            <div class="waypoint" data-animation="fade-in" data-delay=".6s">
+                                <div class="label bold">API Development</div>
+                                <div>
+                                    Creating RESTful APIs and GraphQL services for seamless data integration.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- RESUME -->
         <section id="resume">
             <div class="container flex">
@@ -411,12 +443,12 @@
                 </div>
             </div>
 
-            <div id="gallery" class="container flex row wrap waypoint">
+            <div id="gallery" class="container waypoint">
 
                 <div class="mix php" data-my-order="1">
                     <div>
                         <div class="card">
-                            <img src="img/projects/users.digiebot.png" alt="User Management System" />
+                            <img src="img/projects/users.digiebot.png" alt="User Management System" loading="lazy" />
                         </div>
                         <div class="text">
                             <div class="bold">User Management | Crypto Payements | Referral Commission Based System</div>
@@ -429,7 +461,7 @@
                 <div class="mix php" data-my-order="1">
                     <div>
                         <div class="card">
-                            <img src="img/projects/poafresh.png" alt="Poafresh Online Shop" />
+                            <img src="img/projects/poafresh.png" alt="Poafresh Online Shop" loading="lazy" />
                         </div>
                         <div class="text">
                             <div class="bold">Online Shop Store (Poafresh)</div>
@@ -442,7 +474,7 @@
                 <div class="mix php" data-my-order="1">
                     <div>
                         <div class="card">
-                            <img src="img/projects/fascinateshop.png" alt="Ortez.co" />
+                            <img src="img/projects/fascinateshop.png" alt="Ortez.co" loading="lazy" />
                         </div>
                         <div class="text">
                             <div class="bold">Ortez.co</div>
@@ -455,7 +487,7 @@
                 <div class="mix php" data-my-order="1">
                     <div>
                         <div class="card">
-                            <img src="img/projects/fascinateshop.png" alt="Ortez.net" />
+                            <img src="img/projects/fascinateshop.png" alt="Ortez.net" loading="lazy" />
                         </div>
                         <div class="text">
                             <div class="bold">Ortez.net</div>
@@ -468,7 +500,7 @@
                 <div class="mix angular" data-my-order="1">
                     <div>
                         <div class="card">
-                            <img src="img/projects/pdf-angular-app.png" alt="Online Shop Store" />
+                            <img src="img/projects/pdf-angular-app.png" alt="Online Shop Store" loading="lazy" />
                         </div>
                         <div class="text">
                             <div class="bold">Online Shop Store</div>
@@ -478,6 +510,42 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section id="testimonials">
+            <div class="container flex">
+                <div class="header waypoint" data-animation="slide-in-left">
+                    TESTIMONIALS
+                </div>
+                <div class="header-bar waypoint" data-animation="slide-in-left" data-delay=".5s"></div>
+
+                <div class="flex row label-wrap">
+                    <div class="flex row-gt-sm">
+                        <div class="flex bullet-wrap">
+                            <div class="icon-wrap waypoint" data-animation="flip-in-x">
+                                <i class="mdi mdi-account"></i>
+                            </div>
+                            <div class="waypoint" data-animation="fade-in">
+                                <div class="label bold">Client A</div>
+                                <div>
+                                    "Waleed delivered exceptional work on our e-commerce platform. His attention to detail and technical expertise were outstanding."
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex bullet-wrap">
+                            <div class="icon-wrap waypoint" data-animation="flip-in-x" data-delay=".2s">
+                                <i class="mdi mdi-account"></i>
+                            </div>
+                            <div class="waypoint" data-animation="fade-in" data-delay=".2s">
+                                <div class="label bold">Client B</div>
+                                <div>Professional and reliable developer. The application he built exceeded our expectations in both functionality and performance.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -545,33 +613,6 @@
         <img src="img/thumb-4.jpg" />
         <img src="img/thumb-5.jpg" />
         <img src="img/thumb-6.jpg" />
-        <img src="img/slides/discover-0.jpg" />
-        <img src="img/slides/discover-1.jpg" />
-        <img src="img/slides/discover-2.jpg" />
-        <img src="img/slides/ordering-0.jpg" />
-        <img src="img/slides/ordering-1.jpg" />
-        <img src="img/slides/ordering-2.jpg" />
-        <img src="img/slides/newrelic-0.jpg" />
-        <img src="img/slides/newrelic-1.jpg" />
-        <img src="img/slides/newrelic-2.jpg" />
-        <img src="img/slides/mystand-0.jpg" />
-        <img src="img/slides/mystand-1.jpg" />
-        <img src="img/slides/mystand-2.jpg" />
-        <img src="img/slides/never-0.jpg" />
-        <img src="img/slides/never-1.jpg" />
-        <img src="img/slides/never-2.jpg" />
-        <img src="img/slides/powur-0.jpg" />
-        <img src="img/slides/powur-1.jpg" />
-        <img src="img/slides/powur-2.jpg" />
-        <img src="img/slides/roambi-0.jpg" />
-        <img src="img/slides/roambi-1.jpg" />
-        <img src="img/slides/roambi-2.jpg" />
-        <img src="img/slides/themall-0.jpg" />
-        <img src="img/slides/themall-1.jpg" />
-        <img src="img/slides/themall-2.jpg" />
-        <img src="img/slides/walker-0.jpg" />
-        <img src="img/slides/walker-1.jpg" />
-        <img src="img/slides/walker-2.jpg" />
     </div>
 </body>
 

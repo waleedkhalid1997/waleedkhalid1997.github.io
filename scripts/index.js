@@ -53,11 +53,17 @@ $(function() {
     if (pos2 > $('#about').offset().top) {
       highlightLink('about');
     }
+    if (pos2 > $('#services').offset().top) {
+      highlightLink('services');
+    }
     if (pos2 > $('#resume').offset().top) {
       highlightLink('resume');
     }
     if (pos2 > $('#portfolio').offset().top) {
       highlightLink('portfolio');
+    }
+    if (pos2 > $('#testimonials').offset().top) {
+      highlightLink('testimonials');
     }
     if (
       pos2 > $('#contact').offset().top ||
