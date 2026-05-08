@@ -1,0 +1,94 @@
+/* ============================================
+   Light Theme Overrides
+   ============================================ */
+
+body.light-theme {
+  color: var(--gray-900);
+  background: var(--gray-100);
+}
+
+body.light-theme .about,
+body.light-theme .skills,
+body.light-theme .projects,
+body.light-theme .contact,
+body.light-theme .experience,
+body.light-theme .education {
+  background: var(--gray-100);
+}
+
+body.light-theme .hero {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+body.light-theme .nav-link.active,
+body.light-theme .nav-link:hover {
+  color: var(--primary);
+}
+
+body.light-theme .navbar.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--gray-200);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .hero-subtitle,
+body.light-theme .about-text p,
+body.light-theme .about-list,
+body.light-theme .project-description,
+body.light-theme .contact-details p,
+body.light-theme .experience-company,
+body.light-theme .experience-list li,
+body.light-theme .education-institution,
+body.light-theme .education-period,
+body.light-theme .education-cgpa,
+body.light-theme .language-list li,
+body.light-theme .interests-list li {
+  color: var(--gray-700);
+}
+
+body.light-theme .skill-name,
+body.light-theme .project-title,
+body.light-theme .contact-details h4,
+body.light-theme .experience-title,
+body.light-theme .education-degree {
+  color: var(--gray-900);
+}
+
+body.light-theme .stat-number {
+  color: var(--primary);
+}
+
+body.light-theme .project-overlay {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.9) 0%, rgba(147, 197, 253, 0.8) 100%);
+  opacity: 0.85;
+}
+
+body.light-theme .footer {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+}
+
+body.light-theme .social-link {
+  color: var(--gray-900);
+}
+
+body.light-theme .social-link:hover {
+  background: var(--accent-light);
+  color: var(--white);
+}
+
+body.light-theme .footer-link {
+  color: var(--gray-700);
+}
+
+body.light-theme .footer-link:hover {
+  color: var(--primary);
+}
+
+body.light-theme .btn-secondary {
+  color: var(--gray-900);
+}
+
+body.light-theme .education-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--gray-200);
+}

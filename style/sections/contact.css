@@ -1,0 +1,78 @@
+/* ============================================
+   Contact Section
+   ============================================ */
+
+.contact {
+  padding: 100px 0;
+  position: relative;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 25% 75%, rgba(184, 134, 11, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 75% 25%, rgba(26, 54, 93, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all var(--transition-base);
+}
+
+.contact-item:hover {
+  transform: translateX(8px);
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3);
+  transition: all var(--transition-base);
+}
+
+.contact-item:hover .contact-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 30px rgba(30, 64, 175, 0.5);
+}
+
+.contact-details h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: 0.3px;
+}
+
+.contact-details p {
+  margin: 0;
+}

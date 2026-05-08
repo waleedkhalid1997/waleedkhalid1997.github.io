@@ -1,0 +1,113 @@
+/* ============================================
+   Footer Section
+   ============================================ */
+
+.footer {
+  background: linear-gradient(135deg, #1a365d 0%, #2d3748 50%, #4a5568 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+  color: var(--gray-100);
+  padding: 60px 0 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 30% 70%, rgba(184, 134, 11, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(26, 54, 93, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-logo h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-logo p {
+  margin: 0;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-link {
+  color: var(--gray-300);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent-light);
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.social-link {
+  width: 50px;
+  height: 50px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  font-size: 1.25rem;
+}
+
+.social-link:hover {
+  background: var(--accent-light);
+  color: var(--dark);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.7;
+  letter-spacing: 0.3px;
+}

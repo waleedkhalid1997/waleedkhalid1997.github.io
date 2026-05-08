@@ -1,0 +1,51 @@
+/* ============================================
+   Card Components
+   ============================================ */
+
+.timeline-item,
+.skill-category,
+.project-card,
+.education-card,
+.stat {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-elevation-2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-item:hover,
+.skill-category:hover,
+.project-card:hover,
+.education-card:hover,
+.stat:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-elevation-3);
+  border-color: var(--accent-light);
+  animation: cardLift 0.3s ease forwards;
+}
+
+/* Card hover overlay effect */
+.skill-category::before,
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-card);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.skill-category:hover::before,
+.project-card:hover::before {
+  opacity: 1;
+}

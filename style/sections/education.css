@@ -1,0 +1,79 @@
+/* ============================================
+   Education Section
+   ============================================ */
+
+.education {
+  padding: 100px 0;
+  position: relative;
+}
+
+.education::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(26, 54, 93, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.education-card {
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+}
+
+.education-icon {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.education-degree {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.education-institution,
+.education-period,
+.education-cgpa {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.language-list,
+.interests-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.language-list li,
+.interests-list li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.interests-list li::before {
+  content: '•';
+  color: var(--accent);
+  font-weight: bold;
+  margin-right: 8px;
+}

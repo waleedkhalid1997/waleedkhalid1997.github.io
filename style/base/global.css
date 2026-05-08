@@ -1,0 +1,93 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* Background Graphics */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(184, 134, 11, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(26, 54, 93, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: var(--z-below);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 25% 25%, rgba(184, 134, 11, 0.03) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(26, 54, 93, 0.03) 1px, transparent 1px);
+  background-size: 100px 100px, 50px 50px;
+  background-position: 0 0, 25px 25px;
+  pointer-events: none;
+  z-index: var(--z-below);
+  animation: geometricRotate 20s linear infinite;
+}
+
+/* Floating Particles */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particleFloat 15s linear infinite;
+}
+
+.particle:nth-child(2) { animation-delay: 2s; left: 20%; animation-duration: 18s; }
+.particle:nth-child(3) { animation-delay: 4s; left: 40%; animation-duration: 22s; }
+.particle:nth-child(4) { animation-delay: 6s; left: 60%; animation-duration: 16s; }
+.particle:nth-child(5) { animation-delay: 8s; left: 80%; animation-duration: 20s; }
+.particle:nth-child(6) { animation-delay: 10s; left: 10%; top: 60%; animation-duration: 25s; }
+.particle:nth-child(7) { animation-delay: 12s; left: 30%; top: 60%; animation-duration: 19s; }
+.particle:nth-child(8) { animation-delay: 14s; left: 50%; top: 60%; animation-duration: 23s; }
+
+/* Large Background Orbs */
+.bg-orb {
+  position: fixed;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(184, 134, 11, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: var(--z-below);
+  animation: morph 20s ease-in-out infinite;
+}
+
+.bg-orb:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.bg-orb:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  bottom: 20%;
+  left: 15%;
+  animation-delay: 5s;
+  background: radial-gradient(circle, rgba(26, 54, 93, 0.08) 0%, transparent 70%);
+}
+
+.bg-orb:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  top: 60%;
+  right: 20%;
+  animation-delay: 10s;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 70%);
+}

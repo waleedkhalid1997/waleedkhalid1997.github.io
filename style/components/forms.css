@@ -1,0 +1,65 @@
+/* ============================================
+   Form Components
+   ============================================ */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid var(--gray-200);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all var(--transition-base);
+  background: var(--white);
+  color: var(--gray-800);
+  font-family: var(--font-primary);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--gray-400);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+  background: var(--white);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Contact Form Container */
+.contact-form {
+  background: var(--glass-bg);
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-elevation-2);
+}
+
+/* Success Message */
+.success-message {
+  display: none;
+  background: linear-gradient(135deg, var(--success) 0%, rgba(22, 163, 74, 0.8) 100%);
+  color: var(--white);
+  padding: 16px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: 1px solid rgba(22, 163, 74, 0.3);
+  animation: slideUp 0.5s ease forwards;
+  box-shadow: 0 8px 25px rgba(22, 163, 74, 0.3);
+}
+
+.success-message.show {
+  display: block;
+}

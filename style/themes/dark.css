@@ -1,0 +1,64 @@
+/* ============================================
+   Dark Theme (Default)
+   ============================================ */
+
+body {
+  color: var(--gray-100);
+  background: var(--dark);
+}
+
+/* Section backgrounds */
+.about,
+.skills,
+.projects,
+.contact,
+.experience,
+.education {
+  background: var(--dark);
+}
+
+/* Text colors */
+.hero-subtitle,
+.about-text p,
+.about-list,
+.project-description,
+.contact-details p,
+.experience-company,
+.experience-list li,
+.education-institution,
+.education-period,
+.education-cgpa,
+.language-list li,
+.interests-list li {
+  color: var(--gray-300);
+}
+
+.skill-name {
+  color: var(--gray-100);
+}
+
+.project-title,
+.contact-details h4,
+.experience-title,
+.education-degree {
+  color: var(--gray-100);
+}
+
+.stat-number {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card backgrounds */
+.stat,
+.timeline-item,
+.skill-category,
+.project-card,
+.education-card,
+.contact-form {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(20px);
+}

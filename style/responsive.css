@@ -1,0 +1,170 @@
+/* ============================================
+   Responsive Design
+   ============================================ */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .nav-menu {
+    gap: 30px;
+  }
+
+  .experience-timeline {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  :root {
+    --spacing-lg: 1.5rem;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .hero {
+    padding: 40px 0;
+    margin-top: 70px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .btn {
+    flex: 1;
+    justify-content: center;
+    min-width: 140px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+  }
+
+  .nav-container {
+    height: 70px;
+    padding: 0 var(--spacing-lg);
+  }
+
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .footer-social {
+    gap: 15px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  :root {
+    --spacing-lg: 1rem;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .hero-container {
+    padding: 0 15px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .project-content {
+    padding: 20px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .nav-menu {
+    gap: 20px;
+  }
+
+  .footer-content {
+    gap: 20px;
+  }
+
+  .footer-social {
+    gap: 15px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    min-width: 120px;
+  }
+}

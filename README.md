@@ -1,36 +1,94 @@
-# Waleed Khalid - Portfolio
+# Waleed Khalid - Professional Portfolio
 
-A modern, responsive portfolio website showcasing full-stack web development skills.
+A modern, professional portfolio website showcasing full-stack development expertise with a clean, contemporary design.
 
-## Features
+## ✨ Features
 
-- **Modern Design**: Clean dark theme with gradient backgrounds
-- **Responsive Layout**: Works on all devices
-- **Smooth Animations**: Subtle entrance animations
-- **Professional Sections**: Home, About, Resume, Portfolio, Contact
-- **Resume Download**: Direct link to PDF resume
-- **Social Links**: LinkedIn, GitHub, Email
+- **Modern UI/UX**: Clean white and blue gradient design with professional typography
+- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
+- **Smooth Animations**: CSS transitions and scroll-triggered animations
+- **SEO Optimized**: Complete meta tags for search engines and social media sharing
+- **Performance Focused**: Lazy loading images and optimized assets
+- **Professional Sections**: Hero, About, Skills, Projects, Contact
+- **Interactive Elements**: Hover effects, smooth scrolling navigation
+- **Contact Form**: Functional contact form with success feedback
 
-## Technologies Used
+## 🛠️ Technologies Used
 
-- HTML5 & CSS3 with CSS Variables
-- JavaScript for interactions
-- Material Design Icons
-- Responsive Flexbox/Grid layouts
+- **Frontend**: HTML5, CSS3, Vanilla JavaScript (ES6+)
+- **Styling**: Modern CSS with Flexbox/Grid, CSS Variables
+- **Icons**: Font Awesome 6
+- **Fonts**: Google Fonts (Inter)
+- **Performance**: Lazy loading, optimized images
 
-## Getting Started
+## 🚀 Getting Started
 
-1. Clone the repository
-2. Open `index.html` in your browser or serve locally
-3. For development, use a local server to avoid CORS issues
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/waleedkhalid1997/waleedkhalid1997.github.io.git
+   cd waleedkhalid1997.github.io
+   ```
 
-## Customization
+2. Serve locally (recommended):
+   ```bash
+   python3 -m http.server 8000
+   # or
+   npx serve .
+   ```
 
-- Update colors in `:root` CSS variables
-- Replace placeholder content with your actual details
-- Add your resume PDF as `Waleed_Khalid_Resume.pdf`
-- Modify social links in the footer
+3. Open `http://localhost:8000` in your browser
 
-## Contact
+## 🎨 Customization
 
-Connect with me on [LinkedIn](https://www.linkedin.com/in/waleed-khalid-073b04131/) or [GitHub](https://github.com/Waleedkhalid1997/).
+### Personal Information
+- Update name, bio, and contact details in `index.html`
+- Replace profile image in `img/me.png`
+- Update social media links in the footer
+
+### Projects
+- Add project images to `img/projects/`
+- Update project descriptions and links in the Projects section
+- Modify tech stack tags as needed
+
+### Styling
+- Colors are defined as CSS variables in `style/style.css`
+- Modify gradients, fonts, and spacing in the CSS file
+- Adjust responsive breakpoints for different screen sizes
+
+### Skills
+- Update skill percentages and names in the Skills section
+- Add or remove skill categories as needed
+
+## 📱 Sections Overview
+
+- **Hero**: Eye-catching introduction with call-to-action buttons
+- **About**: Personal introduction with key statistics
+- **Skills**: Technical expertise organized by category
+- **Projects**: Featured work with images and descriptions
+- **Contact**: Contact information and functional contact form
+
+## 🔧 Development
+
+The site uses vanilla JavaScript for:
+- Smooth scrolling navigation
+- Mobile menu toggle
+- Scroll-based active link highlighting
+- Form submission handling
+- Animation triggers
+
+## 📈 Performance
+
+- Lazy loading for images
+- Optimized CSS and JavaScript
+- Minimal dependencies (only Font Awesome)
+- Fast loading times
+
+## 📞 Contact
+
+- **Email**: waleed@example.com
+- **LinkedIn**: [Waleed Khalid](https://linkedin.com/in/waleed-khalid)
+- **GitHub**: [waleedkhalid1997](https://github.com/waleedkhalid1997)
+
+---
+
+*Built with ❤️ using modern web technologies*
