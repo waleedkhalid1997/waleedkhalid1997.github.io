@@ -37,6 +37,7 @@
   align-items: center;
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
 .hero-content {
@@ -529,29 +530,29 @@
 
 .floating-element-1 {
   top: 15%;
-  right: 10%;
+  right: 15%;
   animation-delay: 0s;
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
 }
 
 .floating-element-2 {
-  top: 40%;
-  right: 15%;
+  top: 35%;
+  right: 20%;
   animation-delay: 2s;
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
 }
 
 .floating-element-3 {
-  bottom: 20%;
-  right: 8%;
+  bottom: 25%;
+  right: 12%;
   animation-delay: 4s;
   background: linear-gradient(135deg, var(--primary-500), var(--primary-400));
   color: var(--white);
 }
 
 .floating-element-4 {
-  bottom: 15%;
-  left: 10%;
+  bottom: 20%;
+  left: 15%;
   animation-delay: 6s;
   background: linear-gradient(135deg, var(--accent-500), var(--accent-400));
   color: var(--white);
@@ -559,14 +560,14 @@
 
 .floating-element-5 {
   top: 25%;
-  left: 15%;
+  left: 20%;
   animation-delay: 1s;
   background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0.05));
 }
 
 .floating-element-6 {
   bottom: 35%;
-  left: 20%;
+  left: 25%;
   animation-delay: 5s;
   background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.05));
 }
@@ -688,18 +689,20 @@
 /* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
-  bottom: var(--space-8);
+  bottom: var(--space-6);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-2);
   color: var(--text-secondary);
   font-size: var(--font-size-sm);
   opacity: 0;
   animation: fadeInUp 1s ease-out 2.5s both;
   cursor: pointer;
+  z-index: 10;
+  transition: all var(--transition-base);
 }
 
 .scroll-text {
@@ -729,12 +732,18 @@
   animation: scrollBounce 2s ease-in-out infinite;
 }
 
+.scroll-indicator:hover {
+  transform: translateY(-2px);
+}
+
 .scroll-indicator:hover .scroll-mouse {
   border-color: var(--primary-500);
+  transform: scale(1.1);
 }
 
 .scroll-indicator:hover .scroll-wheel {
   background: var(--primary-500);
+  animation-duration: 1s;
 }
 
 /* ============================================

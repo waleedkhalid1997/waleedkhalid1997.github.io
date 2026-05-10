@@ -107,6 +107,10 @@ class PortfolioApp {
     // Scroll to top button
     this.scrollTop?.addEventListener('click', () => this.scrollToTop());
 
+    // Scroll indicator
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    scrollIndicator?.addEventListener('click', () => this.scrollToSection());
+
     // Contact form
     const contactForm = document.getElementById('contactForm');
     contactForm?.addEventListener('submit', (e) => this.handleContactSubmit(e));
@@ -431,6 +435,22 @@ class PortfolioApp {
       top: 0,
       behavior: 'smooth'
     });
+  }
+
+  scrollToSection() {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    const targetSectionId = scrollIndicator?.getAttribute('data-scroll-to');
+
+    if (targetSectionId) {
+      const targetSection = document.getElementById(targetSectionId);
+      if (targetSection) {
+        const offsetTop = targetSection.offsetTop - 80; // Account for navbar height
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    }
   }
 
   // ==================== UTILITIES ====================
