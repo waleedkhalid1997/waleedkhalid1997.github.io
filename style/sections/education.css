@@ -32,10 +32,17 @@
   border-radius: 16px;
   text-align: center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-elevation-2);
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .education-card:hover {
   transform: translateY(-8px);
+  box-shadow: var(--shadow-elevation-3);
+  border-color: var(--accent-light);
 }
 
 .education-icon {
@@ -76,4 +83,63 @@
   color: var(--accent);
   font-weight: bold;
   margin-right: 8px;
+}
+
+/* ============================================
+   Responsive Design for Education Section
+   ============================================ */
+
+@media (max-width: 768px) {
+  .education {
+    padding: 80px 0;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .education-card {
+    padding: 25px;
+  }
+
+  .education-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .education-degree {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education {
+    padding: 60px 0;
+  }
+
+  .education-card {
+    padding: 20px;
+  }
+
+  .education-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .education-degree {
+    font-size: 1rem;
+  }
+
+  .education-institution,
+  .education-period,
+  .education-cgpa {
+    font-size: 0.9rem;
+  }
+
+  .language-list li,
+  .interests-list li {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
 }

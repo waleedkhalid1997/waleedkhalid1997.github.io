@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <meta name="theme-color" content="#1a365d">
+
     <!-- Primary Meta Tags -->
     <title>Waleed Khalid | Full Stack Developer | Portfolio</title>
     <meta name="title" content="Waleed Khalid | Full Stack Developer - React, Node.js, PHP, AWS">
@@ -13,714 +12,850 @@
     <meta name="keywords" content="Full Stack Developer, Web Developer, React, Node.js, PHP, Laravel, AWS, Docker, E-commerce, Web Designer, Pakistan">
     <meta name="author" content="Waleed Khalid">
     <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="30 days">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://waleedkhalid1997.github.io">
     <meta property="og:title" content="Waleed Khalid | Full Stack Developer">
     <meta property="og:description" content="Experienced Full Stack Developer with 5+ years of experience building scalable web applications and e-commerce platforms.">
     <meta property="og:image" content="https://waleedkhalid1997.github.io/img/me.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Waleed Khalid Portfolio">
-    <meta property="og:locale" content="en_US">
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://waleedkhalid1997.github.io">
     <meta name="twitter:title" content="Waleed Khalid | Full Stack Developer">
     <meta name="twitter:description" content="Experienced Full Stack Developer. Check out my work and projects.">
     <meta name="twitter:image" content="https://waleedkhalid1997.github.io/img/me.png">
-    
-    <!-- LinkedIn -->
-    <meta name="linkedin:title" content="Waleed Khalid - Full Stack Developer">
-    <meta name="linkedin:description" content="Full Stack Developer specializing in modern web technologies and scalable solutions">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://waleedkhalid1997.github.io">
-    
-    <!-- Icons and Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/me.png">
-    
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style/style.css">
-    
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Waleed Khalid",
-      "url": "https://waleedkhalid1997.github.io",
-      "image": "https://waleedkhalid1997.github.io/img/me.png",
-      "jobTitle": "Full Stack Developer",
-      "sameAs": [
-        "https://linkedin.com/in/waleed-khalid",
-        "https://github.com/waleedkhalid1997"
-      ],
-      "knowsAbout": [
-        "Full Stack Development",
-        "React",
-        "Node.js",
-        "PHP",
-        "AWS",
-        "Docker",
-        "Web Design"
-      ]
-    }
-    </script>
 </head>
 
 <body>
-    <!-- Loading Animation -->
+    <!-- Loading Screen -->
     <div class="loading-overlay" id="loadingOverlay">
-        <div class="loading-content">
-            <div class="loading-spinner"></div>
-            <div class="loading-text">Loading Experience...</div>
-        </div>
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Loading Experience...</p>
     </div>
 
-    <!-- Scroll Progress Indicator -->
+    <!-- Scroll Progress -->
     <div class="scroll-progress">
         <div class="scroll-progress-bar" id="scrollProgressBar"></div>
     </div>
 
-    <!-- Floating Particles for Visual Appeal -->
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-
-    <!-- Large Background Orbs -->
-    <div class="bg-orb"></div>
-    <div class="bg-orb"></div>
-    <div class="bg-orb"></div>
-
-    <!-- Enhanced Cursor Effects -->
-    <div class="cursor-glow" id="cursorGlow"></div>
-    <div class="cursor-trail" id="cursorTrail"></div>
-
-    <!-- Floating Action Button -->
-    <div class="fab" id="fab" onclick="scrollToTop()">
-        <i class="fas fa-arrow-up"></i>
-    </div>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">WK</div>
-             <ul class="nav-menu">
-                 <li><a href="#home" class="nav-link active">Home</a></li>
-                 <li><a href="#about" class="nav-link">About</a></li>
-                 <li><a href="#experience" class="nav-link">Experience</a></li>
-                 <li><a href="#education" class="nav-link">Education</a></li>
-                 <li><a href="#skills" class="nav-link">Skills</a></li>
-                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                 <li><a href="#contact" class="nav-link">Contact</a></li>
-             </ul>
-             <div class="nav-toggle" aria-label="Toggle navigation">
-                 <span></span>
-                 <span></span>
-                 <span></span>
-             </div>
+            <div class="nav-brand">
+                <span class="nav-logo">WK</span>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+                <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="nav-overlay" id="navOverlay"></div>
+        <div class="nav-mobile-menu" id="navMobileMenu">
+            <a href="#home" class="nav-link" data-section="home">Home</a>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+            <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+            <a href="#education" class="nav-link" data-section="education">Education</a>
+            <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+            <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+            <a href="#contact" class="nav-link" data-section="contact">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content fade-in-up">
-                <h1 class="hero-title">
-                    <span class="typewriter-text" id="typewriter">Hi, I'm Waleed Khalid</span>
-                    <span class="typewriter-cursor">|</span>
-                </h1>
-                <p class="hero-subtitle animate-fadeInUp">
-                    Software & Project Engineer | Full-Stack & Backend Specialist
-                </p>
-                <p class="hero-meta animate-fadeInUp">
-                    PHP • Node.js • React • Angular • AWS • Docker • 5+ years experience
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary animate-bounceIn" style="animation-delay: 1s;">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary animate-bounceIn" style="animation-delay: 1.2s;">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="hero-image-wrapper animate-zoomIn">
-                    <img src="img/me.png" alt="Waleed Khalid - Full Stack Developer" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="about-content fade-in">
-                <div class="about-image">
-                    <img src="img/me.png" alt="Waleed Khalid - Full Stack Developer" loading="lazy">
-                </div>
-                <div class="about-text">
-                    <p>
-                        I'm an experienced Full-Stack and Backend Engineer skilled in PHP (LAMP/CodeIgniter), Node.js, NestJS, React, Angular, and Python. With 5+ years of professional experience, I specialize in building scalable web applications, robust APIs, and enterprise systems.
+    <!-- Main Content -->
+    <main class="main-content">
+                <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="hero-greeting">Hi, I'm</span>
+                        <span class="hero-name">Waleed Khalid</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Software & Project Engineer
+                        <span class="hero-specialization">| Full-Stack & Backend Specialist</span>
                     </p>
-                    <p>
-                        My expertise spans:
+                    <p class="hero-meta">
+                        <span class="tech-item">PHP</span>
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">Angular</span>
+                        <span class="tech-item">AWS</span>
+                        <span class="tech-item">Docker</span>
+                        <span class="tech-item">5+ years experience</span>
                     </p>
-                     <ul class="about-list">
-                         <li><strong>Full-Stack Development:</strong> MEAN/MERN stacks, LAMP stack, modern frameworks</li>
-                         <li><strong>Database Design & Optimization:</strong> MySQL, PostgreSQL, MongoDB, Firebase</li>
-                         <li><strong>Enterprise Systems:</strong> HRMS, e-commerce platforms, CRM systems, automation platforms</li>
-                         <li><strong>API Development:</strong> RESTful APIs, third-party integrations, blockchain integration</li>
-                         <li><strong>DevOps & Cloud:</strong> Docker, CI/CD pipelines (GitLab), AWS, Google Cloud, Vercel</li>
-                         <li><strong>Performance:</strong> Query optimization, backend tuning, system scalability</li>
-                     </ul>
-                     <p>
-                         I'm committed to delivering high-quality solutions that drive business value while maintaining clean, scalable code following SOLID principles and best practices.
-                     </p>
-                    <div class="about-stats">
-                        <div class="stat slide-up" style="animation-delay: 0.1s;">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat slide-up" style="animation-delay: 0.2s;">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Projects Completed</div>
-                        </div>
-                        <div class="stat slide-up" style="animation-delay: 0.3s;">
-                            <div class="stat-number">20+</div>
-                            <div class="stat-label">Happy Clients</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Skills & Expertise</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category fade-in" style="animation-delay: 0.1s;">
-                    <h3 class="skill-category-title"><i class="fas fa-code"></i> Frontend</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">React</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Angular CLI</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Redux</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">jQuery</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">HTML5 & CSS3</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category fade-in" style="animation-delay: 0.2s;">
-                    <h3 class="skill-category-title"><i class="fas fa-server"></i> Backend</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">PHP (Core)</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Node.js & Express</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">NestJS</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">CodeIgniter3</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category fade-in" style="animation-delay: 0.3s;">
-                    <h3 class="skill-category-title"><i class="fas fa-database"></i> Databases</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">MySQL & PostgreSQL</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">MongoDB</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Firebase</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">SQLite</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Query Optimization</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category fade-in" style="animation-delay: 0.4s;">
-                    <h3 class="skill-category-title"><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Docker</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">AWS</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Google Cloud & Vercel</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">CI/CD (GitLab)</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Linux & Bash</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category fade-in" style="animation-delay: 0.5s;">
-                    <h3 class="skill-category-title"><i class="fas fa-tools"></i> Tools & Libraries</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Git & PM2</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Sequelize & Mongoose</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Puppeteer & Web Scraping</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Blockchain Integration</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Work Experience</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="experience-timeline">
-                <div class="timeline-item fade-in slide-up" style="animation-delay: 0.1s;">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="experience-header">
-                            <h3 class="experience-title">Full Stack Developer</h3>
-                            <span class="experience-date">Aug 2024 - Present</span>
-                        </div>
-                        <p class="experience-company">FullStop | Remote</p>
-                        <ul class="experience-list">
-                            <li>Built and enhanced core features for the Auction marketplace with tax automation</li>
-                            <li>Integrated TaxJar API for accurate multi-state sales tax calculation</li>
-                            <li>Implemented Firebase services for authentication, real-time database, and cloud storage</li>
-                            <li>Developed serverless backend functions using Google Cloud Functions</li>
-                            <li>Integrated CRM (Zoho CRM) for customer data and sales automation</li>
-                            <li>Integrated NFT minting capabilities and blockchain APIs</li>
-                        </ul>
-                    </div>
-                </div>
-
-                 <div class="timeline-item fade-in slide-up" style="animation-delay: 0.2s;">
-                     <div class="timeline-marker"></div>
-                     <div class="timeline-content">
-                         <div class="experience-header">
-                             <h3 class="experience-title">Project Engineer</h3>
-                             <span class="experience-date">Apr 2023 - Nov 2024</span>
-                         </div>
-                         <p class="experience-company">SOAP Engineering | Remote, United States</p>
-                         <ul class="experience-list">
-                             <li>Maintained and optimized Python scripts for automated report generation using pandas</li>
-                             <li>Managed SQLite and MySQL databases with configuration and query optimization</li>
-                             <li>Handled data management and performance improvements</li>
-                         </ul>
-                     </div>
-                 </div>
-
-                <div class="timeline-item fade-in slide-up" style="animation-delay: 0.3s;">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="experience-header">
-                            <h3 class="experience-title">Software Engineer</h3>
-                            <span class="experience-date">Feb 2022 - Apr 2023</span>
-                        </div>
-                        <p class="experience-company">Codex Squared | Islamabad, Pakistan</p>
-                        <ul class="experience-list">
-                            <li>Managed multiple full-stack projects using MEAN stack, React, and NestJS</li>
-                            <li>Led a small development team coordinating tasks and ensuring timely delivery</li>
-                            <li>Implemented new features and optimized database queries for performance</li>
-                        </ul>
-                    </div>
-                </div>
-
-                 <div class="timeline-item fade-in slide-up" style="animation-delay: 0.4s;">
-                     <div class="timeline-marker"></div>
-                     <div class="timeline-content">
-                         <div class="experience-header">
-                             <h3 class="experience-title">Senior Web Developer</h3>
-                             <span class="experience-date">Apr 2019 - Feb 2022</span>
-                         </div>
-                         <p class="experience-company">Vizz Web Solutions | Islamabad, Pakistan</p>
-                         <ul class="experience-list">
-                             <li>Managed multiple backend projects using PHP LAMP stack and CodeIgniter</li>
-                             <li>Led development of full-stack applications using MEAN stack</li>
-                             <li>Handled DevOps workflows including Docker containerization and CI/CD pipelines</li>
-                             <li>Configured and maintained Linux-based dedicated servers</li>
-                             <li>Delivered new features and optimized legacy database queries</li>
-                         </ul>
-                     </div>
-                 </div>
-
-                 <div class="timeline-item fade-in slide-up" style="animation-delay: 0.5s;">
-                     <div class="timeline-marker"></div>
-                     <div class="timeline-content">
-                         <div class="experience-header">
-                             <h3 class="experience-title">Web Developer</h3>
-                             <span class="experience-date">Oct 2018 - Apr 2019</span>
-                         </div>
-                         <p class="experience-company">Toor360 | Rawalpindi, Pakistan</p>
-                         <ul class="experience-list">
-                             <li>Managed company websites and online portals with updates and maintenance</li>
-                             <li>Developed responsive website templates using HTML5 and CSS3</li>
-                             <li>Built dynamic web applications using PHP with proper backend functionality</li>
-                             <li>Designed and managed MySQL databases using phpMyAdmin</li>
-                         </ul>
-                     </div>
-                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Education & Credentials</h2>
-                <div class="section-divider"></div>
-            </div>
-             <div class="education-grid">
-                 <div class="education-card fade-in slide-up" style="animation-delay: 0.1s;">
-                     <div class="education-icon">
-                         <i class="fas fa-graduation-cap"></i>
-                     </div>
-                     <h3 class="education-degree">Associate Degree in Computer Science</h3>
-                     <p class="education-institution">University of Central Punjab</p>
-                     <p class="education-period">Jun 2016 - Jun 2018</p>
-                     <p class="education-cgpa">CGPA: 3.55 / 4.00</p>
-                 </div>
-
-                 <div class="education-card fade-in slide-up" style="animation-delay: 0.2s;">
-                     <div class="education-icon">
-                         <i class="fas fa-language"></i>
-                     </div>
-                     <h3 class="education-degree">Languages</h3>
-                     <ul class="language-list">
-                         <li><strong>English:</strong> Professional Working Proficiency</li>
-                         <li><strong>Urdu:</strong> Native or Bilingual Proficiency</li>
-                     </ul>
-                 </div>
-
-                 <div class="education-card fade-in slide-up" style="animation-delay: 0.3s;">
-                     <div class="education-icon">
-                         <i class="fas fa-heart"></i>
-                     </div>
-                     <h3 class="education-degree">Interests</h3>
-                     <ul class="interests-list">
-                         <li><i class="fas fa-plane-alt"></i> Travelling</li>
-                         <li><i class="fas fa-camera"></i> Photography</li>
-                         <li><i class="fas fa-mountain"></i> Trekking</li>
-                     </ul>
-                 </div>
-             </div>
-                    <h3 class="education-degree\">Associate Degree in Computer Science</h3>
-                    <p class="education-institution\">University of Central Punjab</p>
-                    <p class="education-period\">Jun 2016 - Jun 2018</p>
-                    <p class="education-cgpa\">CGPA: 3.55 / 4.00</p>
-                </div>
-
-                <div class="education-card fade-in slide-up\" style=\"animation-delay: 0.2s;\">
-                    <div class="education-icon\">
-                        <i class="fas fa-language\"></i>
-                    </div>
-                    <h3 class="education-degree\">Languages</h3>
-                    <ul class="language-list\">
-                        <li><strong>English:</strong> Professional Working Proficiency</li>
-                        <li><strong>Urdu:</strong> Native or Bilingual Proficiency</li>
-                    </ul>
-                </div>
-
-                <div class="education-card fade-in slide-up\" style=\"animation-delay: 0.3s;\">
-                    <div class="education-icon\">
-                        <i class="fas fa-heart\"></i>
-                    </div>
-                    <h3 class="education-degree\">Interests</h3>
-                    <ul class="interests-list\">
-                        <li><i class=\"fas fa-plane-alt\"></i> Travelling</li>
-                        <li><i class=\"fas fa-camera\"></i> Photography</li>
-                        <li><i class=\"fas fa-mountain\"></i> Trekking</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects\" class=\"projects\">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card fade-in slide-up" style="animation-delay: 0.1s;">
-                    <div class="project-image">
-                        <img src="img/projects/poafresh.png" alt="PoaFresh Online Shop" loading="lazy">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">PoaFresh E-Commerce</h3>
-                        <p class="project-description">
-                            Full-featured online shopping platform with inventory management and payment integration.
-                        </p>
-                        <div class="project-meta">Apr 2021 - Jul 2021</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in slide-up" style="animation-delay: 0.2s;">
-                    <div class="project-image">
-                        <img src="img/projects/fascinateshop.png" alt="FacinateShop" loading="lazy">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">FacinateShop</h3>
-                        <p class="project-description">
-                            Multi-vendor e-commerce platform with advanced features and real-time analytics.
-                        </p>
-                        <div class="project-meta">Apr 2020 - Oct 2021</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Angular</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in slide-up" style="animation-delay: 0.3s;">
-                    <div class="project-image">
-                        <img src="img/projects/users.digiebot.png" alt="Etacrafts" loading="lazy">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Etacrafts Online Store</h3>
-                        <p class="project-description">
-                            Modern online shop with seamless shopping experience and order management system.
-                        </p>
-                        <div class="project-meta">Dec 2021 - Present</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">AngularJS</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in slide-up" style="animation-delay: 0.4s;">
-                    <div class="project-image">
-                        <img src="img/projects/pdf-angular-app.png" alt="TradeMark" loading="lazy">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">TradeMark Web Scraper</h3>
-                        <p class="project-description">
-                            Automated web scraping solution using Puppeteer for data extraction and report generation.
-                        </p>
-                        <div class="project-meta">Mar 2021 - Dec 2021</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Express</span>
-                            <span class="tech-tag">Puppeteer</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary btn-lg">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary btn-lg">
+                            <span>Get In Touch</span>
                             <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p><a href="mailto:akwaleed728@gmail.com">akwaleed728@gmail.com</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <p><a href="tel:+923369080274">+92 336 9080274</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Location</h4>
-                            <p>Rawalpindi, Pakistan</p>
-                        </div>
+                        </a>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                    <div id="success-message" class="success-message">
-                        Message sent successfully!
+                <div class="hero-visual">
+                    <div class="hero-image-container">
+                        <img src="img/me.png" alt="Waleed Khalid - Full Stack Developer" class="hero-image">
+                        <div class="hero-image-overlay"></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
+            <!-- Floating Elements -->
+            <div class="floating-elements">
+                <div class="floating-element floating-element-1">
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="floating-element floating-element-2">
+                    <i class="fab fa-node-js"></i>
+                </div>
+                <div class="floating-element floating-element-3">
+                    <i class="fab fa-aws"></i>
+                </div>
+                <div class="floating-element floating-element-4">
+                    <i class="fab fa-docker"></i>
+                </div>
+            </div>
+        </section>
+                <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">Get to know me better</p>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="about-image-container">
+                            <img src="img/me.png" alt="Waleed Khalid" loading="lazy">
+                            <div class="about-image-overlay"></div>
+                        </div>
+                    </div>
+
+                    <div class="about-text">
+                        <p class="about-description">
+                            I'm an experienced <strong>Full-Stack and Backend Engineer</strong> skilled in PHP (LAMP/CodeIgniter), Node.js, NestJS, React, Angular, and Python. With <strong>5+ years</strong> of professional experience, I specialize in building scalable web applications, robust APIs, and enterprise systems.
+                        </p>
+
+                        <div class="about-highlights">
+                            <h3 class="about-highlights-title">My Expertise</h3>
+                            <ul class="about-list">
+                                <li><strong>Full-Stack Development:</strong> MEAN/MERN stacks, LAMP stack, modern frameworks</li>
+                                <li><strong>Database Design & Optimization:</strong> MySQL, PostgreSQL, MongoDB, Firebase</li>
+                                <li><strong>Enterprise Systems:</strong> HRMS, e-commerce platforms, CRM systems, automation platforms</li>
+                                <li><strong>API Development:</strong> RESTful APIs, third-party integrations, blockchain integration</li>
+                                <li><strong>DevOps & Cloud:</strong> Docker, CI/CD pipelines (GitLab), AWS, Google Cloud, Vercel</li>
+                                <li><strong>Performance:</strong> Query optimization, backend tuning, system scalability</li>
+                            </ul>
+                        </div>
+
+                        <p class="about-commitment">
+                            I'm committed to delivering high-quality solutions that drive business value while maintaining clean, scalable code following SOLID principles and best practices.
+                        </p>
+
+                        <div class="about-stats">
+                            <div class="stat">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">20+</div>
+                                <div class="stat-label">Happy Clients</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Experience Section -->
+        <section id="experience" class="experience section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Work Experience</h2>
+                    <p class="section-subtitle">My professional journey</p>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="timeline-title">Full Stack Developer</h3>
+                                <span class="timeline-company">FullStop</span>
+                                <span class="timeline-date">Aug 2024 - Present</span>
+                            </div>
+                            <div class="timeline-location">Remote</div>
+                            <ul class="timeline-list">
+                                <li>Built and enhanced core features for the Auction marketplace with tax automation</li>
+                                <li>Integrated TaxJar API for accurate multi-state sales tax calculation</li>
+                                <li>Implemented Firebase services for authentication, real-time database, and cloud storage</li>
+                                <li>Developed serverless backend functions using Google Cloud Functions</li>
+                                <li>Integrated CRM (Zoho CRM) for customer data and sales automation</li>
+                                <li>Integrated NFT minting capabilities and blockchain APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="timeline-title">Project Engineer</h3>
+                                <span class="timeline-company">SOAP Engineering</span>
+                                <span class="timeline-date">Apr 2023 - Nov 2024</span>
+                            </div>
+                            <div class="timeline-location">Remote, United States</div>
+                            <ul class="timeline-list">
+                                <li>Maintained and optimized Python scripts for automated report generation using pandas</li>
+                                <li>Managed SQLite and MySQL databases with configuration and query optimization</li>
+                                <li>Handled data management and performance improvements</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="timeline-title">Software Engineer</h3>
+                                <span class="timeline-company">Codex Squared</span>
+                                <span class="timeline-date">Feb 2022 - Apr 2023</span>
+                            </div>
+                            <div class="timeline-location">Islamabad, Pakistan</div>
+                            <ul class="timeline-list">
+                                <li>Managed multiple full-stack projects using MEAN stack, React, and NestJS</li>
+                                <li>Led a small development team coordinating tasks and ensuring timely delivery</li>
+                                <li>Implemented new features and optimized database queries for performance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="timeline-title">Senior Web Developer</h3>
+                                <span class="timeline-company">Vizz Web Solutions</span>
+                                <span class="timeline-date">Apr 2019 - Feb 2022</span>
+                            </div>
+                            <div class="timeline-location">Islamabad, Pakistan</div>
+                            <ul class="timeline-list">
+                                <li>Managed multiple backend projects using PHP LAMP stack and CodeIgniter</li>
+                                <li>Led development of full-stack applications using MEAN stack</li>
+                                <li>Handled DevOps workflows including Docker containerization and CI/CD pipelines</li>
+                                <li>Configured and maintained Linux-based dedicated servers</li>
+                                <li>Delivered new features and optimized legacy database queries</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3 class="timeline-title">Web Developer</h3>
+                                <span class="timeline-company">Toor360</span>
+                                <span class="timeline-date">Oct 2018 - Apr 2019</span>
+                            </div>
+                            <div class="timeline-location">Rawalpindi, Pakistan</div>
+                            <ul class="timeline-list">
+                                <li>Managed company websites and online portals with updates and maintenance</li>
+                                <li>Developed responsive website templates using HTML5 and CSS3</li>
+                                <li>Built dynamic web applications using PHP with proper backend functionality</li>
+                                <li>Designed and managed MySQL databases using phpMyAdmin</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Education Section -->
+        <section id="education" class="education section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Education & Credentials</h2>
+                    <p class="section-subtitle">My academic background</p>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3 class="education-title">Associate Degree in Computer Science</h3>
+                            <p class="education-institution">University of Central Punjab</p>
+                            <p class="education-period">Jun 2016 - Jun 2018</p>
+                            <p class="education-grade">CGPA: 3.55 / 4.00</p>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3 class="education-title">Languages</h3>
+                            <ul class="education-list">
+                                <li><strong>English:</strong> Professional Working Proficiency</li>
+                                <li><strong>Urdu:</strong> Native or Bilingual Proficiency</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3 class="education-title">Interests</h3>
+                            <ul class="education-list">
+                                <li><i class="fas fa-plane"></i> Travelling</li>
+                                <li><i class="fas fa-camera"></i> Photography</li>
+                                <li><i class="fas fa-mountain"></i> Trekking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills & Expertise</h2>
+                    <p class="section-subtitle">Technologies I work with</p>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <i class="fas fa-code skill-category-icon"></i>
+                            <h3 class="skill-category-title">Frontend</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Angular</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Redux</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 & CSS3</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <i class="fas fa-server skill-category-icon"></i>
+                            <h3 class="skill-category-title">Backend</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">PHP & CodeIgniter</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js & Express</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">NestJS</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <i class="fas fa-database skill-category-icon"></i>
+                            <h3 class="skill-category-title">Databases</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MySQL & PostgreSQL</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MongoDB</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Firebase</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Query Optimization</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <i class="fas fa-cloud skill-category-icon"></i>
+                            <h3 class="skill-category-title">DevOps & Cloud</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Docker</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">AWS</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">CI/CD (GitLab)</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Linux & Bash</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <i class="fas fa-tools skill-category-icon"></i>
+                            <h3 class="skill-category-title">Tools & Libraries</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Git & PM2</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Sequelize & Mongoose</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Puppeteer</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Blockchain Integration</span>
+                                    <span class="skill-percentage">70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">My recent work</p>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="img/projects/poafresh.png" alt="PoaFresh Online Shop" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary btn-sm" aria-label="Live demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Live Demo</span>
+                                    </a>
+                                    <a href="#" class="btn btn-secondary btn-sm" aria-label="Source code">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">PoaFresh E-Commerce</h3>
+                            <p class="project-description">
+                                Full-featured online shopping platform with inventory management and payment integration.
+                            </p>
+                            <div class="project-meta">
+                                <span class="project-date">Apr 2021 - Jul 2021</span>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="img/projects/fascinateshop.png" alt="FacinateShop" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary btn-sm" aria-label="Live demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Live Demo</span>
+                                    </a>
+                                    <a href="#" class="btn btn-secondary btn-sm" aria-label="Source code">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">FacinateShop</h3>
+                            <p class="project-description">
+                                Multi-vendor e-commerce platform with advanced features and real-time analytics.
+                            </p>
+                            <div class="project-meta">
+                                <span class="project-date">Apr 2020 - Oct 2021</span>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="img/projects/users.digiebot.png" alt="Etacrafts" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary btn-sm" aria-label="Live demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Live Demo</span>
+                                    </a>
+                                    <a href="#" class="btn btn-secondary btn-sm" aria-label="Source code">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Etacrafts Online Store</h3>
+                            <p class="project-description">
+                                Modern online shop with seamless shopping experience and order management system.
+                            </p>
+                            <div class="project-meta">
+                                <span class="project-date">Dec 2021 - Present</span>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">AngularJS</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="img/projects/pdf-angular-app.png" alt="TradeMark" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="btn btn-primary btn-sm" aria-label="Live demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Live Demo</span>
+                                    </a>
+                                    <a href="#" class="btn btn-secondary btn-sm" aria-label="Source code">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">TradeMark Web Scraper</h3>
+                            <p class="project-description">
+                                Automated web scraping solution using Puppeteer for data extraction and report generation.
+                            </p>
+                            <div class="project-meta">
+                                <span class="project-date">Mar 2021 - Dec 2021</span>
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">Puppeteer</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+                <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Let's work together</p>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3 class="contact-title">Email</h3>
+                                <a href="mailto:akwaleed728@gmail.com" class="contact-link">akwaleed728@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3 class="contact-title">Phone</h3>
+                                <a href="tel:+923369080274" class="contact-link">+92 336 9080274</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3 class="contact-title">Location</h3>
+                                <p class="contact-text">Rawalpindi, Pakistan</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Tell me about your project..." rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+
+                        <div id="formMessage" class="form-message" role="alert"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Waleed Khalid</h3>
-                    <p>Full Stack Developer</p>
+                <div class="footer-brand">
+                    <div class="footer-logo">WK</div>
+                    <h3 class="footer-name">Waleed Khalid</h3>
+                    <p class="footer-title">Full Stack Developer</p>
                 </div>
+
                 <nav class="footer-nav">
                     <a href="#home" class="footer-link">Home</a>
                     <a href="#about" class="footer-link">About</a>
                     <a href="#experience" class="footer-link">Experience</a>
+                    <a href="#education" class="footer-link">Education</a>
                     <a href="#skills" class="footer-link">Skills</a>
                     <a href="#projects" class="footer-link">Projects</a>
                     <a href="#contact" class="footer-link">Contact</a>
                 </nav>
+
                 <div class="footer-social">
-                    <a href="https://linkedin.com/in/waleed-khalid-073b04131" target="_blank" class="social-link" title="LinkedIn">
+                    <a href="https://linkedin.com/in/waleed-khalid-073b04131" class="btn btn-icon-only" target="_blank" rel="noopener" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/waleedkhalid1997" target="_blank" class="social-link" title="GitHub">
+                    <a href="https://github.com/waleedkhalid1997" class="btn btn-icon-only" target="_blank" rel="noopener" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="mailto:akwaleed728@gmail.com" class="social-link" title="Email">
+                    <a href="mailto:akwaleed728@gmail.com" class="btn btn-icon-only" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://wa.me/923369080274" target="_blank" class="social-link" title="WhatsApp">
+                    <a href="https://wa.me/923369080274" class="btn btn-icon-only" target="_blank" rel="noopener" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2024 - 2025 Waleed Khalid. All rights reserved. | Crafted with ❤️</p>
+                <p>&copy; <span id="currentYear"></span> Waleed Khalid. All rights reserved. | Crafted with <i class="fas fa-heart"></i></p>
             </div>
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="scripts/index.js"></script>
 </body>
-
 </html>

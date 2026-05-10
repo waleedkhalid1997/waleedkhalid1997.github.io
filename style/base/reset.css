@@ -1,66 +1,298 @@
+/* ============================================
+   Modern CSS Reset & Base Styles
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-primary);
-  line-height: 1.6;
-  color: var(--gray-100);
-  background: var(--dark);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--text-primary);
+  background: var(--bg-primary);
   overflow-x: hidden;
-  position: relative;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background-color var(--transition-base), color var(--transition-base);
 }
 
+/* Enhanced focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* Ensure smooth scrolling works properly */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fix any potential text selection issues */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Improve text rendering across all elements */
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, div, a, button {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 1px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+}
+
+h1 { font-size: var(--font-size-4xl); font-weight: var(--font-weight-bold); }
+h2 { font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); }
+h3 { font-size: var(--font-size-2xl); font-weight: var(--font-weight-semibold); }
+h4 { font-size: var(--font-size-xl); font-weight: var(--font-weight-semibold); }
+h5 { font-size: var(--font-size-lg); font-weight: var(--font-weight-medium); }
+h6 { font-size: var(--font-size-base); font-weight: var(--font-weight-medium); }
+
+p {
+  margin-bottom: var(--space-4);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Link styles */
+a {
+  color: var(--primary-600);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-700);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+/* List styles */
+ul, ol {
+  margin-bottom: var(--space-4);
+  padding-left: var(--space-6);
+}
+
+li {
+  margin-bottom: var(--space-1);
+  color: var(--text-secondary);
+}
+
+/* Form elements */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* Image optimization */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color var(--transition-fast);
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-4);
 }
 
-button {
-  font-family: inherit;
-  cursor: pointer;
-  border: none;
-  outline: none;
+th, td {
+  padding: var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--border-primary);
 }
 
-ul, ol {
-  list-style: none;
+th {
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-weight: inherit;
+/* Code styles */
+code, pre {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
 }
 
-p {
-  margin: 0;
+code {
+  padding: 0.125rem 0.25rem;
+  background: var(--bg-surface);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-tertiary);
 }
 
-/* Focus styles for accessibility */
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+pre {
+  padding: var(--space-4);
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-md);
+  overflow-x: auto;
+  margin-bottom: var(--space-4);
 }
 
-/* Smooth scrolling for all elements */
-*, *::before, *::after {
-  scroll-behavior: smooth;
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Quote styles */
+blockquote {
+  border-left: 4px solid var(--primary-500);
+  padding-left: var(--space-4);
+  margin: var(--space-6) 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure consistent section alignment */
+.section {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+/* Fix any potential layout shifts */
+.main-content {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Improve section transitions */
+.section {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Ensure proper stacking context */
+.navbar {
+  z-index: 1000;
+}
+
+.scroll-progress,
+.theme-toggle,
+.scroll-top {
+  z-index: 999;
+}
+
+/* Section base styles */
+.section {
+  padding: var(--space-20) 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.section-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+  position: relative;
+}
+
+.section-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-normal);
+  margin-bottom: var(--space-6);
+}
+
+.section-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-500), var(--accent-500));
+  margin: 0 auto var(--space-8);
+  border-radius: var(--border-radius-full);
+  position: relative;
+}
+
+.section-divider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, var(--primary-500), var(--accent-500));
+  border-radius: var(--border-radius-full);
+  opacity: 0.8;
+  animation: shimmer 2s ease-in-out infinite;
 }

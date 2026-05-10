@@ -20,6 +20,25 @@ body.light-theme .hero {
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
 
+/* Hero section text overrides for light theme */
+body.light-theme .hero-content {
+  color: var(--gray-900);
+}
+
+body.light-theme .hero-title {
+  /* Keep gradient for branding, but ensure readability */
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: brightness(0.9); /* Slightly dim for better readability */
+}
+
+body.light-theme .hero-subtitle,
+body.light-theme .hero-meta {
+  color: var(--gray-700);
+}
+
 body.light-theme .nav-link.active,
 body.light-theme .nav-link:hover {
   color: var(--primary);
@@ -31,6 +50,7 @@ body.light-theme .navbar.scrolled {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
+/* Enhanced text contrast for light theme */
 body.light-theme .hero-subtitle,
 body.light-theme .about-text p,
 body.light-theme .about-list,
@@ -44,6 +64,22 @@ body.light-theme .education-cgpa,
 body.light-theme .language-list li,
 body.light-theme .interests-list li {
   color: var(--gray-700);
+}
+
+/* Section titles and headings */
+body.light-theme .section-title,
+body.light-theme .hero-title,
+body.light-theme .skill-category-title,
+body.light-theme .timeline-item .experience-title,
+body.light-theme .education-degree {
+  color: var(--gray-900);
+}
+
+/* Additional elements for better contrast */
+body.light-theme .stat-label,
+body.light-theme .tech-tag,
+body.light-theme .project-meta {
+  color: var(--gray-600);
 }
 
 body.light-theme .skill-name,
@@ -91,4 +127,26 @@ body.light-theme .btn-secondary {
 body.light-theme .education-card {
   background: rgba(255, 255, 255, 0.9);
   border-color: var(--gray-200);
+}
+
+/* Enhanced card backgrounds for light theme */
+body.light-theme .timeline-item,
+body.light-theme .skill-category,
+body.light-theme .project-card,
+body.light-theme .stat {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--gray-200);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Navbar enhancements for light theme */
+body.light-theme .navbar {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+/* Improve readability of glassmorphism elements */
+body.light-theme .contact-form {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--gray-300);
 }
