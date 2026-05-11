@@ -266,10 +266,6 @@
 
 .tech-icon:hover {
   transform: translateY(-4px) scale(1.1);
-  box-shadow: var(--shadow-lg);
-  border-color: currentColor;
-  background: currentColor;
-  color: var(--white);
 }
 
 /* Tech stack brand colors */
