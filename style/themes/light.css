@@ -29,7 +29,7 @@ body.light-theme .hero-title {
   /* Keep gradient for branding, but ensure readability */
   background: var(--gradient-accent);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
   background-clip: text;
   filter: brightness(0.9); /* Slightly dim for better readability */
 }

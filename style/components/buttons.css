@@ -253,6 +253,37 @@
   color: var(--accent-light);
 }
 
+.btn-outline {
+  background: transparent;
+  color: var(--primary-500);
+  border-color: var(--primary-500);
+  box-shadow: none;
+}
+
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary-500);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  z-index: -1;
+}
+
+.btn-outline:hover::before {
+  opacity: 0.1;
+}
+
+.btn-outline:hover {
+  background: var(--primary-500);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
 /* Button Ripple Effect */
 .btn {
   position: relative;
