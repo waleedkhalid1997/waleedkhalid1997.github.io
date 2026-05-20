@@ -56,8 +56,9 @@ body.light-theme .about-text p,
 body.light-theme .about-list,
 body.light-theme .project-description,
 body.light-theme .contact-details p,
-body.light-theme .experience-company,
-body.light-theme .experience-list li,
+body.light-theme .timeline-company,
+body.light-theme .timeline-list li,
+body.light-theme .timeline-location,
 body.light-theme .education-institution,
 body.light-theme .education-period,
 body.light-theme .education-cgpa,
@@ -70,7 +71,7 @@ body.light-theme .interests-list li {
 body.light-theme .section-title,
 body.light-theme .hero-title,
 body.light-theme .skill-category-title,
-body.light-theme .timeline-item .experience-title,
+body.light-theme .timeline-title,
 body.light-theme .education-degree {
   color: var(--gray-900);
 }
@@ -85,7 +86,7 @@ body.light-theme .project-meta {
 body.light-theme .skill-name,
 body.light-theme .project-title,
 body.light-theme .contact-details h4,
-body.light-theme .experience-title,
+body.light-theme .timeline-title,
 body.light-theme .education-degree {
   color: var(--gray-900);
 }
@@ -130,13 +131,53 @@ body.light-theme .education-card {
 }
 
 /* Enhanced card backgrounds for light theme */
-body.light-theme .timeline-item,
+body.light-theme .timeline-content,
 body.light-theme .skill-category,
 body.light-theme .project-card,
 body.light-theme .stat {
   background: rgba(255, 255, 255, 0.95);
   border-color: var(--gray-200);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Timeline specific light theme styles */
+body.light-theme .timeline::before {
+  background: linear-gradient(to bottom, var(--primary), var(--accent-500));
+}
+
+body.light-theme .timeline-marker {
+  background: var(--primary);
+  border-color: var(--gray-100);
+}
+
+/* Timeline markers are now centrally positioned */
+
+body.light-theme {
+  animation: none !important;
+  transform: none !important;
+}
+
+body.light-theme .timeline-item:hover .timeline-marker {
+  background: var(--primary);
+  transform: translateX(-50%) scale(1.2);
+  box-shadow: 0 0 0 8px rgba(59, 130, 246, 0.15);
+}
+
+body.light-theme .timeline-content:hover {
+  background: rgba(59, 130, 246, 0.03);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12), 0 0 0 2px var(--primary);
+}
+
+body.light-theme .timeline-date {
+  background: var(--gray-100);
+  border-color: var(--gray-300);
+  color: var(--gray-700);
+}
+
+body.light-theme .timeline-content:hover .timeline-date {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
 }
 
 /* Navbar enhancements for light theme */
@@ -149,4 +190,38 @@ body.light-theme .navbar {
 body.light-theme .contact-form {
   background: rgba(255, 255, 255, 0.95);
   border-color: var(--gray-300);
+}
+
+/* Responsive timeline marker positioning for light theme */
+@media (max-width: 1024px) {
+  body.light-theme .timeline::before {
+    left: 30px;
+  }
+
+  body.light-theme .timeline-marker {
+    left: 30px !important;
+    transform: translateX(0) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body.light-theme .timeline::before {
+    left: 35px;
+  }
+
+  body.light-theme .timeline-marker {
+    left: 35px !important;
+    transform: translateX(0) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body.light-theme .timeline::before {
+    left: 20px;
+  }
+
+  body.light-theme .timeline-marker {
+    left: 20px !important;
+    transform: translateX(0) !important;
+  }
 }
